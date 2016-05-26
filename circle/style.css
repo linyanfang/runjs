@@ -1,0 +1,36 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: #000;
+}
+img{
+	border: 0px;
+}
+#pi, #pi span, #heat, #heat span{
+	display: inline-block;
+	position: absolute;
+}
+#pi{
+	top: 100px;
+	left: 200px;
+	z-index: 100;
+}
+#pi span{
+	left: -10px;
+	top: -10px;
+	width: 20px;
+	height: 20px;
+}
+#heat{
+	top: 200px;
+	left: 200px;
+	z-index: 0;
+}
+#heat span{
+	left: -50px;
+	top: -50px;
+	width: 100px;
+	height: 95px;
+}
