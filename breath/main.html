@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>breath</title>
+<style type="text/css">
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font-size: 12px;
+	/*关闭字体大小自动调整的功能*/
+	-webkit-text-size-adjust: none;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #333;
+}
+img{
+	border: none;
+}
+.breath-btn{
+	position: relative;
+	width: 100px;
+	height: 10px;
+	margin: 40px auto;
+	line-height: 40px;
+	border: 1px solid #2b92d4;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	overflow: hidden;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6cc3fe), to(#21a1d0) );
+	background-image: -moz-linear-gradient(#6cc3fe, #21a1d0);
+	-webkit-animation-name: breath;
+	/*动画以低速开始结束*/
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 2700ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	animation: ease-in-out breath 2700ms infinite alternate;
+}
+/*-webkit-animation-name 必须结合@-webkit-keyframes一起使用*/
+@keyframes breath{
+	0%{
+		opacity: 0.2;
+		box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+	}
+	100%{
+		opacity: 1;
+		border: 1px solid rgba(59, 235, 235, 1);
+		box-shadow: 0 1px 30px rgba(59, 255, 255, 1);
+	}
+}
+
+@-webkit-keyframes breath{
+	0%{
+		opacity: 0.2;
+		box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+	}
+	100%{
+		opacity: 1;
+		border: 1px solid rgba(59, 235, 235, 1);
+		box-shadow: 0 1px 30px rgba(59, 255, 255, 1);
+	}
+}
+
+</style>
+</head>
+<body>
+<div class="breath-btn"></div>	
+</body>
+</html>
